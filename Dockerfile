@@ -18,7 +18,7 @@ RUN echo '#!/bin/bash' > /init.sh && \
     echo 'fi' >> /init.sh && \
     echo 'rm -rf /tmp/*.lck' >> /init.sh && \
     echo 'crontab /etc/crontab' >> /init.sh && \
-    echo 'cron -f' >> /etc/crontab
+    echo 'cron -f' >> /init.sh
 RUN chmod +x /init.sh
 # Define default command.
 CMD ["/init.sh"]
